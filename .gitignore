@@ -141,6 +141,8 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-# End of https://www.toptal.com/developers/gitignore/api/node
 
-* -lock.json
+# Ignore -lock.json files
+*-lock.json
+
+# End of https://www.toptal.com/developers/gitignore/api/node
