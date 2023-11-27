@@ -1,11 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneaker Store</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todos los productos</title>
+  <!-- Añadimos el link de las fuentes (GoogleFonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Libreria de iconos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <!-- Añadimos "link" a style.css para aplicar el stilo -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/card.css" />
+  <link rel="stylesheet" href="/css/button.css" />
+
 </head>
+
 <body>
-    
+  <header>
+    <div class="wrap">
+      <h4>Mi Tienda Sneaker Store</h4>
+      <input type="search" name="buscador" id="buscador" placeholder="Buscar productos" />
+      <a href="carrito.html" class="btn"><i class="bi bi-cart2"></i> Carrito<span>1</span></a>
+    </div>
+  </header>
+  <div class="navegacion wrap">
+    <nav>
+      <ul>
+        <li><a href="index.html">Todos los productos</a></li>
+        <li><a href="nosotros.html">Sobre nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="gadgets.html">Gadgets</a></li>
+        <li><a href="oferta.html">Ofertas</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li><a href="mis-pedidos.html">Mis pedidos</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="wrap">
+    <h1>Todos los productos</h1>
+    <h3>Gadgets de cocina</h3>
+    <p>Consigue ahora los mejores productos de Sneaker Store</p>
+    <a href="#">Ver todos</a>
+
+    <section>
+      <div class="cards-home">
+        <div class="card">
+          <img src="/img/zapatilla1.jpg" alt="Zapatilla 01" />
+          <div class="contenido">
+
+            <div class="top">
+              <h4>Nike Air Force 1</h4>
+              <div class="h4">100<i class="bi bi-currency-euro m-color"></i></div>
+            </div>
+
+            <div class="valoracion">
+              <span class="m-color">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+
+            <p>Consigue ahora los mejores productos de Sneaker Store</p>
+            <div class="actions">
+              <button class="carrito">Añadir al carrito</button>
+              <a href="#" class="btn">Ver</a>
+            </div>
+
+          </div> <!-- Cierre de div cotenido de tarjeta -->
+        </div> <!-- Cierre de div card -->
+
+        <div class="card">
+          <img src="/img/zapatilla2.jpg" alt="Zapatilla 01" />
+          <div class="contenido">
+
+            <div class="top">
+              <h4>Nike Air Force 1</h4>
+              <div class="h4">125<i class="bi bi-currency-euro m-color"></i></div>
+            </div>
+
+            <div class="valoracion">
+              <span class="m-color">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+
+            <p>Consigue ahora los mejores productos de Sneaker Store</p>
+            <div class="actions">
+              <button class="carrito">Añadir al carrito</button>
+              <a href="#" class="btn">Ver</a>
+            </div>
+
+          </div> <!-- Cierre de div cotenido de tarjeta -->
+        </div> <!-- Cierre de div card -->
+
+        <div class="card">
+          <img src="/img/zapatilla3.jpg" alt="Zapatilla 01" />
+          <div class="contenido">
+
+            <div class="top">
+              <h4>Nike Dunk</h4>
+              <div class="h4">125<i class="bi bi-currency-euro m-color"></i></div>
+            </div>
+
+            <div class="valoracion">
+              <span class="m-color">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+
+            <p>Consigue ahora los mejores productos de Sneaker Store</p>
+            <div class="actions">
+              <button class="carrito">Añadir al carrito</button>
+              <a href="#" class="btn">Ver</a>
+            </div>
+
+          </div> <!-- Cierre de div cotenido de tarjeta -->
+        </div> <!-- Cierre de div card -->
+      </div>
+    </section>
+
+    <div>
+      <form>
+        <h3>Testimonios de clientes</h3>
+        <h4>Consigue ahora los mejores productos de Sneaker Store</h4>
+        <a href="testimonios.html">Ver todos</a>
+      </form>
+    </div>
+
+    <div class="box">
+      <p>
+        Si en algún momento te has preguntado cuál es el secreto para que
+        estas divertidas zapatillas, creadas con tan sólo una suela de caucho
+        y un poco de lona, sigan siendo un icono de estilo década tras década,
+        es el momento de descubrirlo gracias al nuevo fashion film Forever
+        Chuck que Converse acaba de lanzar.
+      </p>
+      <span>Gandalph Mithrandir</span>
+      <div class="m-color">
+        <span class="valoracion"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+            class="bi bi-star-fill"></i></span><i class="bi bi-star"></i><i class="bi bi-star"></i>
+      </div>
+    </div>
+  </main>
+  <!-- Final de main -->
+
+  <section class="seccionBottom wrap">
+    <div>
+      <img src="#" alt="pago-seguro" width="" />
+      <h5>Pago seguro</h5>
+      <h6>100% garantizado</h6>
+    </div>
+    <div>
+      <img src="#" alt="envio-gratis" width="" />
+      <h5>Envío gratis</h5>
+      <h6>En pedidos de +100€</h6>
+    </div>
+    <div>
+      <img src="#" alt="garantia" width="" />
+      <h5>2 años de garantía</h5>
+      <h6>En todos los gadgets</h6>
+    </div>
+    <div>
+      <img src="#" alt="ofertas" width="" />
+      <h5>Ofertas únicas</h5>
+      <h6>Precios de mayoristas</h6>
+    </div>
+  </section>
+  <!-- Final de section -->
+
+  <footer class="wrap">
+    <div>
+      <h4>Mi Tienda Releevant</h4>
+      <div>
+        <ul class="menu">
+          <li><a href="centro-ayuda.html">Centro de ayuda</a></li>
+          <li><a href="servicio-consumidor.html">Servicio al consumidor</a></li>
+          <li><a href="escribenos.html">Escríbenos</a></li>
+          <li><a href="servicio-telefonico.html">Servicio telefónico</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="menu">
+          <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+          <li><a href="condiciones-compra.html">Condiciones de compra</a></li>
+          <li><a href="opiniones-clientes.html">Opiniones de clientes</a></li>
+          <li><a href="privacidad.html">Aviso de privacidad y cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <form>
+        <h3>Unete a nuestra newsletter y recibe ofertas diarias</h3>
+        <input type="email" name="correo-newsletter" id="correo-newsletter" placeholder="Introduce tu email" />
+        <input type="submit" value="Suscribirme" />
+        <label>
+          <input type="checkbox" name="privacidad-newsletter" id="privacidad-newsletter" />
+          Acepto la <span style="color: blue">politica de privacidad</span> de
+          esta web
+        </label>
+      </form>
+      <div>
+        <h3>Siguenos en redes</h3>
+        <a href="https://www.facebook.com"><img src="#" alt="facebook" /></a>
+        <a href="https://www.youtube.com"><img src="#" alt="youtube" /></a>
+        <a href="https://www.twitch.com"><img src="#" alt="twitch" /></a>
+        <a href="https://www.instagram.com"><img src="#" alt="instagram" /></a>
+      </div>
+    </div>
+  </footer>
+  <!-- Final de footer -->
 </body>
+
 </html>
