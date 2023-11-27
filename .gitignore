@@ -145,4 +145,6 @@ dist
 # Ignore -lock.json files
 *-lock.json
 
+
+.DS-Store
 # End of https://www.toptal.com/developers/gitignore/api/node
