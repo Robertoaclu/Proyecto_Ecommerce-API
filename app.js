@@ -1,8 +1,9 @@
-const express = require(`express`);
+// Node.js + Express
+const express = require("express");
 const app = express();
 const mysql = require("mysql2");
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 app.use(express.json());
 
 // -----------------------------------------------------------------------------------
@@ -23,6 +24,52 @@ connection.connect(function (error) {
 });
 
 // -----------------------------------------------------------------------------------
+// Funciones útiles
+
+function handleSQLError(response, error, result, callback) {
+    if (error) {
+        response.status(400).send(`error: ${error.message}`);
+        return;
+    }
+    callback(result);
+}
+
+
+// -----------------------------------------------------------------------------------
+// Aquí empieza la API
+
+
+// ENDPOINTS PARA CARRITO
+
+app.get(`/carrito/:compraId`, function(request, response){
+    connection.query(`SELECT * FROM producto
+        JOIN compra_producto ON producto.id=compra_producto.productoId
+        JOIN compras ON compras.id=compra_producto.compraId
+        WHERE compraId= ${request.params.compraId}`, function(error, result, fields) {
+
+        if (error){
+            return console.error(`error: ${error.message}`);
+        }
+        response.send(result);
+    });
+    console.log("Listado de productos de una compraId");
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
