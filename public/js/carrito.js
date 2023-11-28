@@ -16,8 +16,7 @@ function mostrarCarrito(compraId) {
         let innerHTML = "<div>";
         for(i=0; i<json.length; i++){
             innerHTML += 
-            `<div>
-                <div>
+                `<div>
                     <img src="${json[i].foto}" alt="Zapatilla 01" />
                 </div>
                 <div>
@@ -29,12 +28,23 @@ function mostrarCarrito(compraId) {
                     <button class="menos" onclick="menos(${json[i].id})">➖</button>
                     <span class="total" id="total_${json[i].id}">${json[i].cantidad}</span>
                     <button class="mas" onclick="mas(${json[i].id})">➕</button>
-                </div>
-            </div>`;
+                </div>`;
         }
 
-
         innerHTML += `</div>`;
+
+        let precioTotalProductos;
+        for(i=0; i<json.length; i++){
+            precioTotalProductos += json[i].cantidad*json[i].precio;
+        }
+
+        innerHTML += `<div>
+        <h3>Resumen del pedido</h3>
+        <p>Continua con el proceso de compra para seleccionar el metodo de pago</p>
+        <h3>${precioTotalProductos}</h3>
+        <button class="boton" onClick="procederPago(${json[i].id})">Proceder al pago</button>
+        </div>`;
+
      }).catch(function(error){
         console.log(error);
      });
