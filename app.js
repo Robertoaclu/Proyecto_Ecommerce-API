@@ -39,7 +39,7 @@ function handleSQLError(response, error, result, callback) {
 // Aquí empieza la API
 
 
-// ENDPOINTS PARA CARRITO
+// ENDPOINT PARA CARRITO (GET)
 
 app.get(`/carrito/:compraId`, function(request, response){
     connection.query(`SELECT * FROM producto
@@ -53,6 +53,20 @@ app.get(`/carrito/:compraId`, function(request, response){
         response.send(result);
     });
     console.log("Listado de productos de una compraId");
+})
+
+
+// ENDPOINT PARA FORMA DE PAGO - MIS TARJETAS (GET)
+
+app.get(`/forma-pago/:usuarioId`, function(request, response){
+    connection.query(`SELECT * FROM tarjetas where usuarioId=${request.params.usuarioId}`,
+    function(error, result, fields){
+        if(error){
+            return console.error(`error:${error.message}`);
+        }
+        response.send(result);
+    })
+    console.log("Listado de tarjeta del usuario correspondiente");
 })
 
 

@@ -42,9 +42,10 @@ function mostrarCarrito(compraId) {
         <h3>Resumen del pedido</h3>
         <p>Continua con el proceso de compra para seleccionar el metodo de pago</p>
         <h3>${precioTotalProductos}</h3>
-        <button class="boton" onClick="procederPago(${json[i].id})">Proceder al pago</button>
+        <button class="boton" onClick="location.href='html/forma-pago.html'">Proceder al pago</button>
         </div>`;
 
+        carritoDiv.innerHTML=innerHTML;
      }).catch(function(error){
         console.log(error);
      });
