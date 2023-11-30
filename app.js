@@ -58,7 +58,7 @@ app.get(`/carrito/:compraId`, function(request, response){
 
 // ENDPOINT PARA FORMA DE PAGO - MIS TARJETAS (GET)
 
-app.get(`/forma-pago/:usuarioId`, function(request, response){
+app.get(`/formasPago/:usuarioId`, function(request, response){
     connection.query(`SELECT * FROM tarjetas where usuarioId=${request.params.usuarioId}`,
     function(error, result, fields){
         if(error){

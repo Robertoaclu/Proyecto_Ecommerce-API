@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas de pago</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div>
+            <img src="#" alt="logo" width="20%" />
+            <h4>Mi Tienda Sneaker Store</h4>
+        </div>
+        <div>
+            <a href="carrito.html">Carrito<span>1</span></a>
+            <i class="bi bi-arrow-right-circle"></i>
+            <a href="forma-pago.html">Forma de pago</a>
+            <i class="bi bi-arrow-right-circle"></i>
+            <a href="finalizar-pedido.html">Finalizar pedido</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="titular">
+            <h2>Forma de Pago</h2>
+            <a href="../index.html">Seguir comprando</a>
+        </div>
+        <div class="gestionTarjetas">
+            <div class="tarjetas">
+                <h2>Mis tarjetas</h2>
+                <div id="listaTarjetas" class="listaTarjetas">
+                    <input type="submit" value="Mastercard ...6547" />
+                    <input type="submit" value="Mastercard ...6547" />
+                    <input type="submit" value="Mastercard ...6547" />
+                    <button onclick="nuevaTarjeta()">Pagar con esta tarjeta</button>
+                </div>
+            </div>
+            <div class="nuevaTarjeta">
+                <h2>Añadir nueva tarjeta</h2>
+                <div id="listaTarjetas" class="listaTarjetas">
+                    <input type="text" id="numeroTarjeta" name="numeroTarjeta" required placeholder="Número de tarjeta">
+                    <input type="text" id="numeroTarjeta" name="numeroTarjeta" required placeholder="Titular de la tarjeta">
+                    <div>
+                        <input type="text" id="numeroTarjeta" name="numeroTarjeta" required placeholder="Caducidad">
+                        <input type="text" id="numeroTarjeta" name="numeroTarjeta" required placeholder="Código de seguridad">
+                    </div>
+                    <button onclick="nuevaTarjeta()">Añadir a mis tarjetas</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
