@@ -14,19 +14,22 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<!-- ---------------------------------------------------------------------------- -->
+
     <header class="cabecera">
         <div>
             <img src="#" alt="logo" width="20%" />
             <h4>Mi Tienda Sneaker Store</h4>
         </div>
         <div>
-            <a href="carrito.html">Carrito<span>1</span></a>
+            <a href="../html/carrito.html">Carrito<span>1</span></a>
             <i class="bi bi-arrow-right-circle"></i>
             <a href="forma-pago.html">Forma de pago</a>
             <i class="bi bi-arrow-right-circle"></i>
-            <a href="finalizar-pedido.html">Finalizar pedido</a>
+            <a href="../html/finalizar-pedido.html">Finalizar pedido</a>
         </div>
     </header>
+<!-- ---------------------------------------------------------------------------- -->
 
     <main>
         <div class="titular">
@@ -37,10 +40,10 @@
             <div class="tarjetas">
                 <h2>Mis tarjetas</h2>
                 <div id="listaTarjetas" class="listaTarjetas">
-                    <input type="submit" value="Mastercard ...6547" />
-                    <input type="submit" value="Mastercard ...6547" />
-                    <input type="submit" value="Mastercard ...6547" />
-                    <button onclick="nuevaTarjeta()">Pagar con esta tarjeta</button>
+                    <input type="submit" value="Mastercard ...000" />
+                    <input type="submit" value="Mastercard ...000" />
+                    <input type="submit" value="Mastercard ...000" />
+                    <button onclick="seleccionarTarjeta()">Pagar con esta tarjeta</button>
                 </div>
             </div>
             <div class="nuevaTarjeta">
@@ -57,6 +60,101 @@
             </div>
         </div>
     </main>
+<!-- ---------------------------------------------------------------------------- -->
+
+    <section class="seccion">
+        <div class="secciones">
+            <div>
+            <i class="bi bi-shield-lock"></i>
+            </div>
+            <div>
+                <h5>Pago seguro</h>
+                <h6>100% garantizado</h6>
+            </div>
+        </div>
+        <div class="secciones">
+            <i class="bi bi-truck"></i>
+            <div>
+                <h5>Envío gratis</h5>
+                <h6>En pedidos de +100€</h6>
+            </div>
+        </div>
+        <div class="secciones">
+            <i class="bi bi-shield-check"></i>
+            <div>
+                <h5>2 años de garantía</h5>
+                <h6>En todos los gadgets</h6>
+            </div>
+        </div>
+        <div class="secciones">
+            <i class="bi bi-box-seam"></i>
+            <div>
+                <h5>Ofertas únicas</h5>
+                <h6>Precios de mayoristas</h6>
+            </div>
+        </div>
+    </section>
+<!-- ---------------------------------------------------------------------------- -->
+
+    <footer>
+        <div>
+          <img src="#" alt="logo" width="20%" />
+          <h4>Mi Tienda Releevant</h4>
+          <div>
+            <ul>
+              <li><a href="centro-ayuda.html">Centro de ayuda</a></li>
+              <li>
+                <a href="servicio-consumidor.html">Servicio al consumidor</a>
+              </li>
+              <li><a href="escribenos.html">Escríbenos</a></li>
+              <li><a href="servicio-telefonico.html">Servicio telefónico</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a href="politica-privacidad.html">Política de privacidad</a>
+              </li>
+              <li><a href="condiciones-compra.html">Condiciones de compra</a></li>
+              <li><a href="opiniones-clientes.html">Opiniones de clientes</a></li>
+              <li><a href="privacidad.html">Aviso de privacidad y cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <form>
+            <h3>Únete a nuestra newsletter y recibe ofertas diarias</h3>
+            <input
+              type="email"
+              name="correo-newsletter"
+              id="correo-newsletter"
+              placeholder="Introduce tu email"
+            />
+            <input type="submit" value="Suscribirme" />
+            <label>
+              <input
+                type="checkbox"
+                name="privacidad-newsletter"
+                id="privacidad-newsletter"
+              />
+              Acepto la <span style="color: blue">política de privacidad</span> de
+              esta web
+            </label>
+          </form>
+          <div>
+            <h3>Síguenos en redes</h3>
+            <a href="https://www.facebook.com"><img src="#" alt="facebook" /></a>
+            <a href="https://www.youtube.com"><img src="#" alt="youtube" /></a>
+            <a href="https://www.twitch.com"><img src="#" alt="twitch" /></a>
+            <a href="https://www.instagram.com"
+              ><img src="#" alt="instagram"
+            /></a>
+          </div>
+        </div>
+    </footer>
+<!-- ---------------------------------------------------------------------------- -->
+
+    <script src="/js/forma-pago.js"></script>
     
 </body>
 </html>
