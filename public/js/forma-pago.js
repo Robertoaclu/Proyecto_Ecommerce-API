@@ -16,7 +16,7 @@ function formasPago(usuarioId){
         
         let innerHTML="";
         for(i=0; i<json.length; i++){
-          innerHTML +=
+          innerHTML +=/* html */
             `<div class="cajaTarjeta">
             <label for="tarjeta_${i}" >${json[i].numero_tarjeta}</label>
             <input type="radio" id="tarjeta_${i}" name="tarjeta" value="${json[i].id}" />

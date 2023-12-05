@@ -97,11 +97,21 @@
     display: flex;
     justify-content: space-evenly;
     gap: 16px;
-    
+    align-items: center;
+    gap: 24px;
 
 }
 
 
 footer{
     background-color: blueviolet;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 48px;
+}
+.pie1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
