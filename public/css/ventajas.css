@@ -1,0 +1,14 @@
+/* Estilo para las ventajas que obtiene el cliente */
+
+.ventajas{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cardVentajas{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 16px;
+    align-items: center;
+    gap: 24px;
+
+}
