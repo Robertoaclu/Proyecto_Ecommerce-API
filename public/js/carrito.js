@@ -15,7 +15,7 @@ function mostrarCarrito(compraId) {
         
         let innerHTML = "<div>";
         for(i=0; i<json.length; i++){
-            innerHTML += 
+            innerHTML +=/*html*/ 
                 `<div>
                     <img src="${json[i].foto}" alt="Zapatilla 01" />
                 </div>
@@ -38,7 +38,7 @@ function mostrarCarrito(compraId) {
             precioTotalProductos += json[i].cantidad*json[i].precio;
         }
 
-        innerHTML += `<div>
+        innerHTML +=/*html*/ `<div>
         <h3>Resumen del pedido</h3>
         <p>Continua con el proceso de compra para seleccionar el metodo de pago</p>
         <h3>${precioTotalProductos}</h3>

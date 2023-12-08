@@ -70,7 +70,28 @@ app.get(`/formasPago/:usuarioId`, function(request, response){
 })
 
 
+app.post(`/tarjetas/:usuarioId`, function (request, response){
+    let numeroTarjeta = request.body.numeroTarjeta;
+    let titularTarjeta = request.body.titularTarjeta;
+    let caducidadTarjeta = request.body.caducidadTarjeta;
+    let codigoSeguridadTarjeta = request.body.codigoSeguridadTarjeta;
+    let usuarioId = request.params.usuarioId;
 
+    console.log(request.body.titularTarjeta, request.params);
+    connection.query(`INSERT INTO tarjetas (numero_tarjeta, titular, caducidad, codigo, usuarioId) VALUES 
+                    ("${numeroTarjeta}",
+                    "${titularTarjeta}",
+                    "${caducidadTarjeta}",
+                    "${codigoSeguridadTarjeta}",
+                    ${usuarioId})`,
+    function (error, result, fields) {
+        if(error){
+            return console.error(`error: ${error.message}`);
+        }
+        response.send({message: `Card added`});
+    });
+    console.log("Card added to database")
+});
 
 
 

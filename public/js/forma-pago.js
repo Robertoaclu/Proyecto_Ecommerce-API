@@ -16,13 +16,13 @@ function formasPago(usuarioId){
         
         let innerHTML="";
         for(i=0; i<json.length; i++){
-          innerHTML +=/* html */
+          innerHTML +=/*html*/
             `<div class="cajaTarjeta">
             <label for="tarjeta_${i}" >${json[i].numero_tarjeta}</label>
             <input type="radio" id="tarjeta_${i}" name="tarjeta" value="${json[i].id}" />
             </div>`;
         }
-        innerHTML+=`<button onclick="seleccionarTarjeta()">Pagar con esta tarjeta</button>`;
+        innerHTML+=/*html*/`<button onclick="seleccionarTarjeta()">Pagar con esta tarjeta</button>`;
         
         totalTarjetas=json.length;
         
@@ -39,5 +39,47 @@ function seleccionarTarjeta(){
         if(seleccionada.checked){
             localStorage.setItem("tarjeta", json[i].id);
         }
+    }
+}
+
+
+
+
+function nuevaTarjeta(){
+    const numeroTarjeta = document.getElementById(`numeroTarjeta`).value;
+    const titularTarjeta = document.getElementById(`titularTarjeta`).value;
+    const caducidadTarjeta = document.getElementById(`caducidadTarjeta`).value;
+    const codigoSeguridadTarjeta = document.getElementById(`codigoSeguridadTarjeta`).value;
+
+    // let usuarioId= localStorage.getItem("usuarioId")
+    let usuarioId=1;
+
+    console.log(codigoSeguridadTarjeta) //completa con todos los datos
+
+    if(numeroTarjeta&&titularTarjeta&&caducidadTarjeta&&codigoSeguridadTarjeta){
+        fetch(`${host}/tarjetas/${usuarioId}`, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                numeroTarjeta: numeroTarjeta, 
+                titularTarjeta: titularTarjeta, 
+                caducidadTarjeta: caducidadTarjeta, 
+                codigoSeguridadTarjeta: codigoSeguridadTarjeta })
+        })
+        .then(function(response){
+            console.log(codigoSeguridadTarjeta);
+            return response.json();
+        })
+        .then (function(json){
+            alert(json.message);
+            if(json.message===`Card added`){
+                formasPago(usuarioId);
+            }
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+    }else{
+        alert(`Required information is missing`);
     }
 }
