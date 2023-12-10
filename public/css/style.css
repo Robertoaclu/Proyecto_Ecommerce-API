@@ -1,19 +1,26 @@
+body{
+    font-family: 'Dosis', sans-serif;
+}
 
-
-
-
-
-
-
-
+.wrap{
+    max-width: 1400px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
 
 /* Estilo para la cabecera */
-.cabecera{
+.cabecera {
     display: flex;
     justify-content: space-between;
-    gap:100px;
+    gap: 100px;
     align-items: center;
     margin: 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 .cabecera a{
@@ -31,6 +38,15 @@
     color: grey;
 }
 
+.logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo h1{
+    font-family: 'Lobster', sans-serif;
+    font-size: 40px;
+}
 
 
 /* Estilo para el titular de la pagina en la que te sitúes */
@@ -49,6 +65,11 @@
     padding: 16px;
     margin: 32px;
     
+}
+
+
+main {
+    margin-top: 160px; /* Ajusta según la altura de la cabecera */
 }
 
 
