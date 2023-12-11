@@ -103,17 +103,20 @@ footer{
     align-items: center;
     padding: 48px;
     color: white;
-
 }
+
 .logoFooter{
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Lobster', sans-serif;
     font-size: 40px;
+    gap: 30px;
 }
 .pie1{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    text-decoration: none;
+    color: white;
 }

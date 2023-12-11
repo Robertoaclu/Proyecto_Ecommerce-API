@@ -8,9 +8,9 @@
 .cardVentajas{
     display: flex;
     justify-content: space-evenly;
-    gap: 16px;
+    gap: 20px;
     align-items: center;
-    gap: 24px;
+    
     padding: 10px 30px;
 
     border-radius: 15px;
