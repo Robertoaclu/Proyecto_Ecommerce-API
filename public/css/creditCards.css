@@ -9,6 +9,9 @@ tarjetas de crédito del cliente */
 .tarjetas{
     padding: 32px;
     margin: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     border-radius: 50px;
     background: #e0e0e0;
@@ -29,6 +32,7 @@ tarjetas de crédito del cliente */
     border: 2px;
     border-color: black;
     border-radius: 12px;
+    
 }
 
 .nuevaTarjeta{

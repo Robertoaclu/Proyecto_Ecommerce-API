@@ -1,5 +1,6 @@
 body{
-    font-family: 'Dosis', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: lighter;
     background-color: rgb(232, 232, 232);
 }
 
@@ -33,15 +34,15 @@ body{
     border: 2px;
     padding: 16px;
     margin: 10px;
-    color: black;
-    border-radius: 15px;
-    background: #e0e0e0;
-    box-shadow: inset 5px 5px 10px #aaaaaa,
-            inset -5px -5px 10px #ffffff;
+    color: white;
+    border-radius: 10px;
+    background: #e02031;
+    box-shadow: inset 13px 13px 26px #9f1723,
+            inset -13px -13px 26px #ff293f;
 }
 
 .cabecera i {
-    color: grey;
+    color: white;
 }
 
 .logoCabecera{
@@ -80,7 +81,11 @@ body{
 main {
     margin-top: 160px; /* Ajusta según la altura de la cabecera */
 }
-
+main h2 {
+    font-family: 'Lobster', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+}
 
 .boton{
     color: black;
