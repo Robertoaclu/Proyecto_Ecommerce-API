@@ -22,7 +22,7 @@ function formasPago(usuarioId){
             <input type="radio" id="tarjeta_${i}" name="tarjeta" value="${json[i].id}" />
             </div>`;
         }
-        innerHTML+=/*html*/`<button onclick="seleccionarTarjeta()">Pagar con esta tarjeta</button>`;
+        innerHTML+=/*html*/`<button class="boton" onclick="seleccionarTarjeta()">Pagar con esta tarjeta</button>`;
         
         totalTarjetas=json.length;
         
