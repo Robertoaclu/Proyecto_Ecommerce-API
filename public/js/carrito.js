@@ -40,7 +40,7 @@ function mostrarCarrito(compraId) {
 
         innerHTML +=/*html*/ `<div>
         <h3>Resumen del pedido</h3>
-        <p>Continua con el proceso de compra para seleccionar el metodo de pago</p>
+        <p>Continua con el proceso de compra para seleccionar el método de pago</p>
         <h3>${precioTotalProductos}</h3>
         <button class="boton" onClick="location.href='html/forma-pago.html'">Proceder al pago</button>
         </div>`;
