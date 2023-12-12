@@ -71,7 +71,7 @@ body{
     font-weight: bold;
 
     border-radius: 15px;
-    background: #e0e0e0;
+    background: rgb(232, 232, 232);
     box-shadow: inset 5px 5px 10px #aaaaaa,
             inset -5px -5px 10px #ffffff;
     
@@ -90,7 +90,7 @@ main h2 {
 .boton{
     color: black;
     border-radius: 8px;
-    background: #e0e0e0;
+    background: rgb(232, 232, 232);
     box-shadow: inset 5px 5px 10px #d3d3d3,
     inset -5px -5px 10px #ededed;
 }
@@ -103,6 +103,7 @@ footer{
     align-items: center;
     padding: 48px;
     color: white;
+    margin: 0 0 0 0;
 }
 
 .logoFooter{

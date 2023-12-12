@@ -14,7 +14,7 @@ tarjetas de crédito del cliente */
     flex-direction: column;
 
     border-radius: 50px;
-    background: #e0e0e0;
+    background: rgb(232, 232, 232);
     box-shadow:  13px 13px 21px #afafaf,
              -13px -13px 21px #ffffff;
 }
@@ -37,7 +37,7 @@ tarjetas de crédito del cliente */
 
 .nuevaTarjeta{
     border-radius: 50px;
-    background: #e0e0e0;
+    background: rgb(232, 232, 232);
     box-shadow:  13px 13px 21px #afafaf,
              -13px -13px 21px #ffffff;
 

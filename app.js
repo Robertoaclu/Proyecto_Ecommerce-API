@@ -97,19 +97,6 @@ app.post(`/tarjetas/:usuarioId`, function (request, response){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.get("/hello", (request, response) => {
     response.send({message:"hello world!"});
 });
