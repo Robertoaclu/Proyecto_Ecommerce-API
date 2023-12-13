@@ -11,9 +11,9 @@ function mostrarCarrito(compraId) {
         return response.json();
     })
     .then(function(json){
-        let carritoDiv = document.getElementById("carritoLista");
+        let carritoDiv = document.getElementById("carrito");
         
-        let innerHTML = "<div>";
+        let innerHTML = "<div class=`carritoLista`>";
         for(i=0; i<json.length; i++){
             innerHTML +=/*html*/ 
                 `<div>
@@ -38,11 +38,11 @@ function mostrarCarrito(compraId) {
             precioTotalProductos += json[i].cantidad*json[i].precio;
         }
 
-        innerHTML +=/*html*/ `<div>
+        innerHTML +=/*html*/ `<div class="resumen">
         <h3>Resumen del pedido</h3>
         <p>Continua con el proceso de compra para seleccionar el método de pago</p>
         <h3>${precioTotalProductos}</h3>
-        <button class="boton" onClick="location.href='html/forma-pago.html'">Proceder al pago</button>
+        <button class="boton" onClick="location.href='formasPago.html'">Proceder al pago</button>
         </div>`;
 
         carritoDiv.innerHTML=innerHTML;

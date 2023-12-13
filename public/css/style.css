@@ -69,7 +69,8 @@ body{
     margin: 32px;
     color: black;
     font-weight: bold;
-
+    border: 3px solid;
+    border-color:#e02031;
     border-radius: 15px;
     background: rgb(232, 232, 232);
     box-shadow: inset 5px 5px 10px #aaaaaa,
