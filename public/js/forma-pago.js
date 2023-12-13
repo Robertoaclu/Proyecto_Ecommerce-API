@@ -40,6 +40,7 @@ function seleccionarTarjeta(){
             localStorage.setItem("tarjeta", json[i].id);
         }
     }
+    window.location.href = 'finalizarPedido.html';
 }
 
 

@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formas de pago</title>
+    <title>Finalizar pedido</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Lobster&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/creditCards.css">
     <link rel="stylesheet" href="/css/ventajas.css">
+    <link rel="stylesheet" href="/css/carrito.css">
 </head>
 <body>
 <!-- ---------------------------------------------------------------------------- -->
@@ -27,45 +27,28 @@
         <div>
             <a href="carrito.html">Carrito</a>
             <i class="bi bi-arrow-right-circle"></i>
-            <a href="#">Forma de pago</a>
+            <a href="formasPago.html">Forma de pago</a>
             <i class="bi bi-arrow-right-circle"></i>
             <a href="#">Finalizar pedido</a>
         </div>
     </header>
-    
-<!-- ---------------------------------------------------------------------------- -->
+
+<!-- ------------------------------------------------------------------------------ -->
 
     <main>
-      
         <div class="titular">
-            <h2>Forma de Pago</h2>
+            <h2>Finalizar compra</h2>
             <a href="../index.html">Seguir comprando</a>
         </div>
-        <div class="gestionTarjetas">
-            <div class="tarjetas">
-                <h2>Mis tarjetas</h2>
-                <div id="listaTarjetas" class="listaTarjetas">
-                    <input type="submit" value="Mastercard ...000" />
-                    <input type="submit" value="Mastercard ...000" />
-                    <input type="submit" value="Mastercard ...000" />
-                    <button onclick="seleccionarTarjeta()">Pagar con esta tarjeta</button>
-                </div>
-            </div>
-            <div class="nuevaTarjeta">
-                <h2>Añadir nueva tarjeta</h2>
-                <div id="listaTarjetas" class="listaTarjetas">
-                    <input type="text" id="numeroTarjeta" name="numeroTarjeta" required placeholder="Número de tarjeta">
-                    <input type="text" id="titularTarjeta" name="titularTarjeta" required placeholder="Titular de la tarjeta">
-                    <div>
-                        <input type="text" id="caducidadTarjeta" name="caducidadTarjeta" required placeholder="Caducidad">
-                        <input type="text" id="codigoSeguridadTarjeta" name="codigoSeguridadTarjeta" required placeholder="Código de seguridad">
-                    </div>
-                    <button class="boton" onclick="nuevaTarjeta()">Añadir a mis tarjetas</button>
-                </div>
-            </div>
-        </div>
     </main>
-<!-- ---------------------------------------------------------------------------- -->
+
+<!-- ------------------------------------------------------------------------------ -->
+
+    <div id="envioResumen" class="envioResumen">
+
+    </div>
+    
+<!-- ------------------------------------------------------------------------------ -->
 
     <section class="ventajas">
         <div class="cardVentajas">
@@ -95,70 +78,71 @@
             </div>
         </div>
     </section>
-<!-- ---------------------------------------------------------------------------- -->
+
+<!-- ------------------------------------------------------------------------------ -->
 
     <footer>
         <div>
-          <div class="logoFooter">
+        <div class="logoFooter">
             <img src="../img/logoSneakerStore.png" alt="logo" width="20%" />
             <h4 class="logoFooter">Sneaker Store</h4>
-          </div>
-          <div class="pie1">
+        </div>
+        <div class="pie1">
             <div>
-              <ul>
+            <ul>
                 <li><a href="centro-ayuda.html">Centro de ayuda</a></li>
                 <li>
-                  <a href="servicio-consumidor.html">Servicio al consumidor</a>
+                <a href="servicio-consumidor.html">Servicio al consumidor</a>
                 </li>
                 <li><a href="escribenos.html">Escríbenos</a></li>
                 <li><a href="servicio-telefonico.html">Servicio telefónico</a></li>
-              </ul>
+            </ul>
             </div>
             <div>
-              <ul>
+            <ul>
                 <li>
-                  <a href="politica-privacidad.html">Política de privacidad</a>
+                <a href="politica-privacidad.html">Política de privacidad</a>
                 </li>
                 <li><a href="condiciones-compra.html">Condiciones de compra</a></li>
                 <li><a href="opiniones-clientes.html">Opiniones de clientes</a></li>
                 <li><a href="privacidad.html">Aviso de privacidad y cookies</a></li>
-              </ul>
+            </ul>
             </div>
-          </div>
+        </div>
         </div>
         <div>
-          <form>
+        <form>
             <h3>Únete a nuestra newsletter y recibe ofertas diarias</h3>
             <input
-              type="email"
-              name="correo-newsletter"
-              id="correo-newsletter"
-              placeholder="Introduce tu email"
+            type="email"
+            name="correo-newsletter"
+            id="correo-newsletter"
+            placeholder="Introduce tu email"
             />
             <input type="submit" value="Suscribirme" />
             <label>
-              <input
+            <input
                 type="checkbox"
                 name="privacidad-newsletter"
                 id="privacidad-newsletter"
-              />
-              Acepto la <span style="color: blue">política de privacidad</span> de
-              esta web
+            />
+            Acepto la <span style="color: blue">política de privacidad</span> de
+            esta web
             </label>
-          </form>
-          <div>
+        </form>
+        <div>
             <h3>Síguenos en redes</h3>
             <a href="https://www.facebook.com"><img src="#" alt="facebook" /></a>
             <a href="https://www.youtube.com"><img src="#" alt="youtube" /></a>
             <a href="https://www.twitch.com"><img src="#" alt="twitch" /></a>
             <a href="https://www.instagram.com"><img src="#" alt="instagram"/></a>
-          </div>
+        </div>
         </div>
     </footer>
-    
-<!-- ---------------------------------------------------------------------------- -->
 
-    <script src="/js/forma-pago.js"></script>
+<!-- ------------------------------------------------------------------------------ -->
     
+    <script src="/js/finalizarPedido.js"></script>
+
 </body>
 </html>

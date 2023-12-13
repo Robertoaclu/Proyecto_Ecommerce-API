@@ -13,7 +13,7 @@ function mostrarCarrito(compraId) {
     .then(function(json){
         let carritoDiv = document.getElementById("carrito");
         
-        let innerHTML = "<div class=`carritoLista`>";
+        let innerHTML = "<div class=`carritoLista``>";
         for(i=0; i<json.length; i++){
             innerHTML +=/*html*/ 
                 `<div>
@@ -22,7 +22,7 @@ function mostrarCarrito(compraId) {
                 <div>
                     <h3>${json[i].nombre}</h3>
                     <p>${json[i].descripcion_corta}</p>
-                    <p>${json[i].precio}</p>
+                    <p>${json[i].precio}<i class="bi bi-currency-euro"></i></p>
                 </div>
                 <div>
                     <button class="menos" onclick="menos(${json[i].id})">➖</button>
@@ -31,7 +31,7 @@ function mostrarCarrito(compraId) {
                 </div>`;
         }
 
-        innerHTML += `</div>`;
+        innerHTML += "</div>";
 
         let precioTotalProductos;
         for(i=0; i<json.length; i++){
@@ -39,9 +39,9 @@ function mostrarCarrito(compraId) {
         }
 
         innerHTML +=/*html*/ `<div class="resumen">
-        <h3>Resumen del pedido</h3>
+        <p id="resumenP">Resumen del pedido<p>
         <p>Continua con el proceso de compra para seleccionar el método de pago</p>
-        <h3>${precioTotalProductos}</h3>
+        <h3>${precioTotalProductos}<i class="bi bi-currency-euro"></i></h3>
         <button class="boton" onClick="location.href='formasPago.html'">Proceder al pago</button>
         </div>`;
 
