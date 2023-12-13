@@ -1,0 +1,19 @@
+.carrito{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.carritoLista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.resumen{
+    border-radius: 50px;
+    background: rgb(232, 232, 232);
+    box-shadow:  13px 13px 21px #afafaf,
+             -13px -13px 21px #ffffff;
+
+    padding: 24px;
+}
