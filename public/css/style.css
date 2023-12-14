@@ -63,7 +63,7 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
-.titular a{
+.boton{
     text-decoration: none;
     padding: 16px;
     margin: 32px;
@@ -88,13 +88,13 @@ main h2 {
     font-size: 40px;
 }
 
-.boton{
+/* .boton{
     color: black;
     border-radius: 8px;
     background: rgb(232, 232, 232);
     box-shadow: inset 5px 5px 10px #d3d3d3,
     inset -5px -5px 10px #ededed;
-}
+} */
 
 /* Estilo del footer */
 footer{
@@ -115,10 +115,14 @@ footer{
     font-size: 40px;
     gap: 30px;
 }
-.pie1{
+.bloqueEnlaces{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     text-decoration: none;
     color: white;
+}
+.bloque{
+    display: flex;
+    flex-direction: column;
 }

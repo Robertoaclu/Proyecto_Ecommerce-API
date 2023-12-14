@@ -41,13 +41,13 @@ function handleSQLError(response, error, result, callback) {
 
 // ENDPOINT PARA CARRITO (GET)
 
-app.get(`/carrito/:compraId`, function(request, response){
+app.get(`/carrito/:compraId`, function (request, response) {
     connection.query(`SELECT * FROM producto
         JOIN compra_producto ON producto.id=compra_producto.productoId
         JOIN compras ON compras.id=compra_producto.compraId
-        WHERE compraId= ${request.params.compraId}`, function(error, result, fields) {
+        WHERE compraId= ${request.params.compraId}`, function (error, result, fields) {
 
-        if (error){
+        if (error) {
             return console.error(`error: ${error.message}`);
         }
         response.send(result);
@@ -58,19 +58,19 @@ app.get(`/carrito/:compraId`, function(request, response){
 
 // ENDPOINT PARA FORMA DE PAGO - MIS TARJETAS (GET)
 
-app.get(`/formasPago/:usuarioId`, function(request, response){
+app.get(`/formasPago/:usuarioId`, function (request, response) {
     connection.query(`SELECT * FROM tarjetas where usuarioId=${request.params.usuarioId}`,
-    function(error, result, fields){
-        if(error){
-            return console.error(`error:${error.message}`);
-        }
-        response.send(result);
-    })
+        function (error, result, fields) {
+            if (error) {
+                return console.error(`error:${error.message}`);
+            }
+            response.send(result);
+        })
     console.log("Listado de tarjeta del usuario correspondiente");
 })
 
 
-app.post(`/tarjetas/:usuarioId`, function (request, response){
+app.post(`/tarjetas/:usuarioId`, function (request, response) {
     let numeroTarjeta = request.body.numeroTarjeta;
     let titularTarjeta = request.body.titularTarjeta;
     let caducidadTarjeta = request.body.caducidadTarjeta;
@@ -84,12 +84,12 @@ app.post(`/tarjetas/:usuarioId`, function (request, response){
                     "${caducidadTarjeta}",
                     "${codigoSeguridadTarjeta}",
                     ${usuarioId})`,
-    function (error, result, fields) {
-        if(error){
-            return console.error(`error: ${error.message}`);
-        }
-        response.send({message: `Card added`});
-    });
+        function (error, result, fields) {
+            if (error) {
+                return console.error(`error: ${error.message}`);
+            }
+            response.send({ message: `Card added` });
+        });
     console.log("Card added to database")
 });
 
@@ -98,7 +98,7 @@ app.post(`/tarjetas/:usuarioId`, function (request, response){
 
 
 app.get("/hello", (request, response) => {
-    response.send({message:"hello world!"});
+    response.send({ message: "hello world!" });
 });
 
 app.listen(8000, () => {
