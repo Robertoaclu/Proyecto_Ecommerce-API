@@ -1,20 +1,21 @@
-body{
+body {
     font-family: 'DM Sans', sans-serif;
     font-weight: lighter;
     background-color: rgb(232, 232, 232);
+    margin: 0;
+    padding: 0;
 }
 
-.wrap{
+.wrap {
     max-width: 1400px;
     padding: 0 16px;
     margin: 0 auto;
-  }
+}
 
 /* Estilo para la cabecera */
 .cabecera {
     display: flex;
     justify-content: space-between;
-    gap: 100px;
     align-items: center;
     margin-bottom: 24px;
     position: fixed;
@@ -22,13 +23,14 @@ body{
     left: 0;
     right: 0;
     padding: 16px;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    color: white;
     background: black;
 
 }
 
-.cabecera a{
+.cabecera a {
     text-decoration: none;
     font-weight: bolder;
     border: 2px;
@@ -38,51 +40,85 @@ body{
     border-radius: 10px;
     background: #e02031;
     box-shadow: inset 13px 13px 26px #9f1723,
-            inset -13px -13px 26px #ff293f;
+        inset -13px -13px 26px #ff293f;
 }
 
-.cabecera i {
-    color: white;
-}
 
-.logoCabecera{
+.logoCabecera {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 5px 0;
 }
-.logoCabecera h1{
+
+.logoCabecera h1 {
     font-family: 'Lobster', sans-serif;
     font-size: 40px;
     color: white;
 }
 
+.buscador{
+    padding: 10px 200px 10px 10px;
+}
+
+/* Estilo para la barra de navegacion */
+.navegacion {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    /* margin: 135px 0 0 0; */
+    padding: 35px;
+    background-color: rgb(224, 2, 20);
+    top: 140.15px;
+    left: 0;
+    right: 0;
+    gap: 20px;
+}
+
+.navegacion a{
+    text-decoration: none;
+    font-family: 'Lobster';
+    font-size: 18px;
+    color: black;
+    border-right: 2px solid;
+    padding: 10px;
+    
+}
+#nav0 {
+    border-right: 0;
+}
+#nav00 {
+    border-right: 0;
+}
 
 /* Estilo para el titular de la pagina en la que te sitúes */
-.titular{
+.titular {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.boton{
+.boton {
     text-decoration: none;
     padding: 16px;
     margin: 32px;
     color: black;
     font-weight: bold;
     border: 3px solid;
-    border-color:#e02031;
+    border-color: #e02031;
     border-radius: 15px;
     background: rgb(232, 232, 232);
     box-shadow: inset 5px 5px 10px #aaaaaa,
-            inset -5px -5px 10px #ffffff;
-    
+        inset -5px -5px 10px #ffffff;
+
 }
 
 
 main {
-    margin-top: 160px; /* Ajusta según la altura de la cabecera */
+    margin-top: 160px;
+    /* Ajusta según la altura de la cabecera */
 }
+
 main h2 {
     font-family: 'Lobster', sans-serif;
     font-weight: normal;
@@ -98,17 +134,18 @@ main h2 {
 } */
 
 /* Estilo del footer */
-footer{
+footer {
     background-color: black;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
     padding: 48px;
     color: white;
-    margin: 0 0 0 0;
+    left: 0;
 }
 
-.logoFooter{
+.logoFooter {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,14 +153,25 @@ footer{
     font-size: 40px;
     gap: 30px;
 }
-.bloqueEnlaces{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+
+footer a {
     text-decoration: none;
     color: white;
 }
-.bloque{
+
+footer form a svg{
+    width: 50px;
+    height: 50px;
+}
+
+.bloqueEnlaces {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.bloque {
     display: flex;
     flex-direction: column;
 }
