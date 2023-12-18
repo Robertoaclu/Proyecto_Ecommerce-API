@@ -3,7 +3,7 @@
 .ventajas{
     display: flex;
     justify-content: space-around;
-    margin:42px;
+    margin:300px;
 }
 .cardVentajas{
     display: flex;
