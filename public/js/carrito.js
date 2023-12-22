@@ -1,4 +1,4 @@
-const host = "http://localhost:3000";
+const host = "http://ec2-3-250-150-140.eu-west-1.compute.amazonaws.com:3000";
 
 window.addEventListener("load", mostrarCarrito(1)); // De momento pondremos la compra 1 hasta que tengamos las compras
 

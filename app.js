@@ -14,6 +14,7 @@ const connection = mysql.createConnection({
     user: "root",
     password: "Elitista1990",
     database: "sneaker_store",
+
 });
 
 connection.connect(function (error) {
