@@ -1,3 +1,1 @@
-const dotenv = require('dotenv');
-dotenv.config();
-const host = process.env.HOST;
+const host = "http://localhost:8000";

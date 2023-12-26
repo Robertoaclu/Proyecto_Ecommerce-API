@@ -102,6 +102,6 @@ app.get("/hello", (request, response) => {
     response.send({ message: "hello world!" });
 });
 
-app.listen(3000, () => {
+app.listen(8000, () => {
     console.log("API up and running!");
 });

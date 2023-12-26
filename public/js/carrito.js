@@ -1,6 +1,4 @@
-const dotenv = require('dotenv');
-dotenv.config();
-const host = process.env.HOST;
+const host = "http://localhost:8000";
 
 window.addEventListener("load", mostrarCarrito(1)); // De momento pondremos la compra 1 hasta que tengamos las compras
 

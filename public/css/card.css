@@ -1,0 +1,81 @@
+.valoracion {
+    color: hsl(16, 100%, 55%)
+}
+
+.cards-home {
+    display: flex;
+    gap: 6px;
+    justify-content: space-evenly;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 17px;
+    background: #ffffff;
+    box-shadow: 17px 17px 57px #bababa,
+        -17px -17px 57px #ffffff;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card .contenido {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card .contenido .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card h4,
+.card p {
+    margin: 0;
+}
+
+.card .valoracion {
+    color: var(--gris);
+}
+
+.card .valoracion .bi {
+    margin-right: 4px;
+}
+
+.card .contenido .actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.card .contenido .actions .carrito {
+    width: 100%;
+}
+
+.botonCard {
+    background: red;
+    padding: 12px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    width: 20%;
+}
+
+.addCarrito {
+    text-decoration: none;
+    /* padding: 16px;
+    margin: 32px; */
+    width: 80%;
+    color: black;
+    font-weight: bold;
+    border: 3px solid;
+    border-color: #e02031;
+    border-radius: 15px;
+    background: rgb(232, 232, 232);
+    box-shadow: inset 5px 5px 10px #aaaaaa,
+        inset -5px -5px 10px #ffffff;
+
+}

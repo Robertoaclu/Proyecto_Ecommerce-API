@@ -1,6 +1,4 @@
-const dotenv = require('dotenv');
-dotenv.config();
-const host = process.env.HOST;
+const host = "http://localhost:8000";
 
 window.addEventListener("load", () => { formasPago(1) });
 
