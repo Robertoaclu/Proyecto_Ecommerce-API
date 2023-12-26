@@ -17,14 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     padding: 16px;
-    z-index: 1000;
-    /* Asegura que esté por encima de otros elementos */
     color: white;
     background: black;
 
@@ -46,7 +39,9 @@ body {
 
 .logoCabecera {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    gap: 15px;
+    margin-left: 15px;
     align-items: center;
     padding: 5px 0;
 }
@@ -64,12 +59,10 @@ body {
 /* Estilo para la barra de navegacion */
 .navegacion {
     display: flex;
-    position: fixed;
     justify-content: space-between;
-    /* margin: 135px 0 0 0; */
-    padding: 35px;
+    margin-bottom: 24px;
+    padding: 24px;
     background-color: rgb(224, 2, 20);
-    top: 140.15px;
     left: 0;
     right: 0;
     gap: 20px;
