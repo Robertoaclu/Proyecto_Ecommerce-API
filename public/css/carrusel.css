@@ -1,0 +1,17 @@
+.itemCarrusel{
+    border: 1px solid black;
+    height: 400px;
+}
+
+.tarjetaCarrusel{
+    background-color: aqua;
+    height: 100%;
+}
+
+.flechasCarrusel{
+    background-color: violet;
+    position: absolute;
+    top: 0;
+    height: 200px;
+    width: 100%;
+}
