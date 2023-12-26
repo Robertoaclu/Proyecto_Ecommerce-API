@@ -60,13 +60,8 @@ body {
 .navegacion {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 24px;
     padding: 24px;
     background-color: rgb(224, 2, 20);
-    left: 0;
-    right: 0;
-    gap: 20px;
-    z-index: 999;
 }
 
 .navegacion a{

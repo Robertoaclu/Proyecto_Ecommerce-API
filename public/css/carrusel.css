@@ -1,17 +1,37 @@
+#contentItemsCarrusel{
+    border: 5px solid black;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
 .itemCarrusel{
     border: 1px solid black;
-    height: 400px;
+    height: 100%;
+    position: relative;
 }
 
 .tarjetaCarrusel{
-    background-color: aqua;
+    background-color: rgba(0, 255, 255, 0.701);
     height: 100%;
 }
 
 .flechasCarrusel{
-    background-color: violet;
     position: absolute;
     top: 0;
-    height: 200px;
+    height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tarjetaCarrusel-1{
+    background-color: rgb(110, 110, 236);
+}
+#tarjetaCarrusel-2{
+    background-color: rgb(110, 188, 236);
+}
+#tarjetaCarrusel-3{
+    background-color: rgb(198, 110, 236);
 }
