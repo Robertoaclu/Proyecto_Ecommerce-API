@@ -10,7 +10,6 @@
 }
 
 .tarjetaCarrusel{
-    background-color: rgba(0, 255, 255, 0.701);
     height: 100%;
 }
 .tarjetaCarrusel img{
@@ -35,21 +34,13 @@
     color: rgba(255, 255, 255, 0.712);
 }
 
-#tarjetaCarrusel-1{
-    background-color: rgb(110, 110, 236);
-}
-#tarjetaCarrusel-2{
-    background-color: rgb(110, 188, 236);
-}
-#tarjetaCarrusel-3{
-    background-color: rgb(198, 110, 236);
-}
-
 #contentPoints{
     margin-bottom: 20px;
     text-decoration: none;
-    font-size: 3º0px;
+    font-size: 40px;
     color: black;
     display: flex;
     justify-content: center;
 }
+
+
