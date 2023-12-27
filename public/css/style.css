@@ -87,6 +87,11 @@ body {
     align-items: center;
 }
 
+.titulo{
+    font-family: 'Lobster';
+    font-size: 30px;
+}
+
 .boton {
     text-decoration: none;
     padding: 16px;
