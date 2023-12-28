@@ -1,0 +1,32 @@
+.producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.capaProducto1, .capaProducto2{
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 50px; */
+    margin: 80px;
+}
+
+.descripcionProducto h3{
+    font-family: 'Lobster';
+    font-size: 50px;
+}
+
+.especificaciones h3{
+    font-family: 'lobster';
+    font-size: 30px;
+}
+
+/* .descripcionProducto{
+    width: 800px;
+} */
+
+.caracteristicaDestacada{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 20px;
+}
