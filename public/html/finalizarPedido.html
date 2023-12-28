@@ -40,40 +40,49 @@
   <main>
     <div class="titular">
       <h2>Finalizar compra</h2>
-      <a href="../html/index.html">Seguir comprando</a>
+      <a class="boton" href="../html/index.html">Seguir comprando</a>
     </div>
   </main>
 
-  <div class="formularioEnvio">
-    <div class="direccionEnvio">
+  <div class="contentFormResumen">
+
+    <div class="contentForm">
       <h3 class="titulo">Direccion de envío</h3>
-      <div>
-        <div class="input1">
-          <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
-          <input type="text" id="apellidos" name="apellidos" required placeholder="Apellidos">
-        </div>
+      <div class="formulario">
 
         <div class="input1">
-          <input class="input" type="tel" id="telefono" name="telefono" required placeholder="Telefono">
-          <input class="input" type="email" id="email" name="email" required placeholder="Email">
+            <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+            <input type="text" id="apellidos" name="apellidos" required placeholder="Apellidos">          
         </div>
 
         <div>
-          <input class="input" type="text" id="calle" name="calle" required placeholder="Calle">
-          <input class="input" type="text" id="numero" name="numero" required placeholder="Numero">
+          <input type="tel" id="telefono" name="telefono" required placeholder="Telefono">
+          <input type="email" id="email" name="email" required placeholder="Email">
         </div>
 
         <div>
-          <input class="input" type="text" id="codigo-postal" name="codigo-postal" required placeholder="Codigo postal">
-          <input class="input" type="text" id="provincia" name="provincia" required placeholder="Provincia">
+          <input type="text" id="calle" name="calle" required placeholder="Calle">
+          <input type="text" id="numero" name="numero" required placeholder="Numero">
         </div>
 
-        <input class="input" type="text" id="pais" name="pais" required placeholder="Pais">
+        <div>
+          <input type="text" id="codigo-postal" name="codigo-postal" required placeholder="Codigo postal">
+          <input type="text" id="provincia" name="provincia" required placeholder="Provincia">
+        </div>
+
+        <div>
+          <input type="text" id="pais" name="pais" required placeholder="Pais">
+        </div>
+
+        <div>
+          <button class="nuevaDireccion">Añadir dirección de envío</button>
+        </div>
       </div>
 
-      <button class="nuevaDireccion">Añadir dirección de envío</button>
       <div class="ventajaEnvio">
-        <i><img width="80" height="80" src="https://img.icons8.com/dotty/80/deliver-food.png" alt="deliver-food" /></i>
+        <div>
+          <img width="80" height="80" src="https://img.icons8.com/dotty/80/deliver-food.png" alt="deliver-food" />
+        </div>
         <div>
           <p>Envío gratis en este pedido</p>
           <p>Por comprar mas de 100€</p>
@@ -81,8 +90,9 @@
       </div>
 
       <div class="ventajaEnvio">
-        <i><img width="64" height="64" src="https://img.icons8.com/wired/64/starred-ticket.png"
-            alt="starred-ticket" /></i>
+        <div>
+          <img width="64" height="64" src="https://img.icons8.com/wired/64/starred-ticket.png" alt="starred-ticket" />
+        </div>
         <div>
           <p>Envío gratis en este pedido</p>
           <p>Por comprar mas de 100€</p>
