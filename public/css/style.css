@@ -22,8 +22,10 @@ body {
     background: black;
 
 }
-
-.cabecera a {
+.cabecera a{
+    text-decoration: none;
+}
+.btnCarrito {
     text-decoration: none;
     font-weight: bolder;
     border: 2px;

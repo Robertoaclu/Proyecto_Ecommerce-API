@@ -1,0 +1,21 @@
+.logReg{
+    margin: 100px;
+    display:flex;
+    justify-content: space-evenly;
+}
+.logReg h3{
+    font-family: 'lobster';
+    font-size: 50px;
+}
+.logReg input{
+    border: 1px solid rgb(255, 195, 195);
+    background-color: rgb(255, 195, 195);
+    border-radius: 10px;
+    padding: 18px;
+    margin: 10px;
+}
+
+.login, .registro{
+    display: flex;
+    flex-direction: column;
+}
