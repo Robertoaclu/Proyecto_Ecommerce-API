@@ -39,7 +39,7 @@
             </div>
             <div>
                 <a href="mis-pedidos.html">Mis pedidos</a><!--
-          --><a id="nav00" href="/html/login.html">Logout</a>
+          --><a id="nav00" href="/html/login.html">Login</a>
             </div>
         </div>
     </header>
@@ -51,9 +51,9 @@
         <div class="login">
             <h3>Iniciar sesión</h3>
             <p>Accede con tus datos anteriores</p>
-            <input type="email" name="email" id="email" placeholder='Email'>
-            <input type="password" name="password" id="password" placeholder='Password'>
-            <button class="boton">Iniciar sesión</button>
+            <input type="email" name="email" id="logEmail" placeholder='Email'>
+            <input type="password" name="password" id="logPassword" placeholder='Password'>
+            <button onclick="iniciarSesion()" class="boton">Iniciar sesión</button>
         </div>
         <div class="registro">
             <h3>Registrate</h3>
@@ -64,7 +64,7 @@
             </div>
             <input type="email" name="email" id="newEmail" placeholder='Email'>
             <input type="password" name="password" id="newPassword" placeholder='Password'>
-            <button class="boton">Crear cuenta</button>
+            <button onclick="registroUsuario()" class="boton">Crear cuenta</button>
         </div>
     </section>
 
@@ -200,7 +200,7 @@
         </div>
     </footer>
 
-    <script href="/js/login.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 
 </html>

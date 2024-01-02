@@ -105,7 +105,7 @@ app.post('/registro', function (req, res) {
     let email = req.body.email;
     let password = req.body.password;
 
-    connection.query(`INSERT INTO usuario (nombre, apellidos, email, contraseña) VALUES 
+    connection.query(`INSERT INTO usuario (nombre, apellidos, email, password) VALUES 
                     ('${nombre}', 
                     '${apellidos}', 
                     '${email}', 
@@ -121,7 +121,27 @@ app.post('/registro', function (req, res) {
 
 
 
+app.post('/login', function (req, res) {
+    let email = req.body.email;
+    let password = req.body.password;
 
+    connection.query(`SELECT * FROM usuario WHERE 
+                    email = '${email}' AND password = '${password}'`,
+        function (error, result, fields) {
+            if (error) {
+                return console.error(`error: ${error.message}`);
+            }
+
+            if (result.length == 0) {
+                res.send({ message: "User not found" });
+                console.log("User not found in the database");
+            } else {
+                res.send(result);
+                console.log("User connected to the database");
+                console.log(result);
+            }
+        });
+})
 
 
 
