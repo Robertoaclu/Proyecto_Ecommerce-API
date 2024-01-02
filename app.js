@@ -42,7 +42,7 @@ function handleSQLError(response, error, result, callback) {
 // ENDPOINTS INDEX
 
 app.get(`/productos`, function (req, res) {
-    connection.query(`SELECT * FROM productos`, function (error, result, fields) {
+    connection.query(`SELECT * FROM producto`, function (error, result, fields) {
 
         if (error) {
             return console.error(`error: ${error.message}`);
@@ -52,7 +52,9 @@ app.get(`/productos`, function (req, res) {
     console.log("Listado de todos los productos");
 })
 
+app.post('/addCarro', function (req, res) {
 
+})
 
 
 
