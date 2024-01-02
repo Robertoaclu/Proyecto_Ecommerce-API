@@ -1,5 +1,13 @@
-const host = "http://localhost:8000";
-
+window.addEventListener("load", () => {
+    const logout = document.getElementById("usuario");
+    if (localStorage.getItem("nombre")) {
+        logout.innerHTML =/*html*/
+            `<a href="/html/index.html">${localStorage.getItem("nombre")}</a>
+            <a id="logout" onclick="cerrarSesion()">Logout</a>`;
+    } else {
+        logout.innerHTML =/*html*/ `<a id="logout" href="/html/login.html">Login</a>`;
+    }
+});
 
 function registroUsuario() {
     const nombreUsuario = document.getElementById(`newName`).value;
@@ -54,9 +62,17 @@ function iniciarSesion() {
             console.log(json[0].id);
             alert(`logged in`);
             localStorage.setItem("usuarioId", json[0].id);
+            localStorage.setItem("nombre", json[0].nombre);
 
             window.location.href = '/html/index.html';
         }).catch(function (error) {
             console.log(error);
         });
+}
+
+
+function cerrarSesion() {
+    localStorage.removeItem("usuarioId");
+    localStorage.removeItem("nombre");
+    window.location.href = '/html/login.html';
 }

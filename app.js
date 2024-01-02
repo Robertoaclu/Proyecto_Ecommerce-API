@@ -38,8 +38,19 @@ function handleSQLError(response, error, result, callback) {
 
 // -----------------------------------------------------------------------------------
 // Aquí empieza la API
+// -----------------------------------------------------------------------------------
+// ENDPOINTS INDEX
+
+app.get(`/`, function (request, response) {
+
+})
 
 
+
+
+
+
+// -----------------------------------------------------------------------------------
 // ENDPOINT PARA CARRITO (GET)
 
 app.get(`/carrito/:compraId`, function (request, response) {
