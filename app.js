@@ -41,8 +41,15 @@ function handleSQLError(response, error, result, callback) {
 // -----------------------------------------------------------------------------------
 // ENDPOINTS INDEX
 
-app.get(`/`, function (request, response) {
+app.get(`/productos`, function (req, res) {
+    connection.query(`SELECT * FROM productos`, function (error, result, fields) {
 
+        if (error) {
+            return console.error(`error: ${error.message}`);
+        }
+        res.send(result);
+    });
+    console.log("Listado de todos los productos");
 })
 
 
@@ -51,9 +58,9 @@ app.get(`/`, function (request, response) {
 
 
 // -----------------------------------------------------------------------------------
-// ENDPOINT PARA CARRITO (GET)
+// ENDPOINT PARA CARRITO
 
-app.get(`/carrito/:compraId`, function (request, response) {
+app.get(`/carrito/:compraId`, function (req, res) {
     connection.query(`SELECT * FROM producto
         JOIN compra_producto ON producto.id=compra_producto.productoId
         JOIN compras ON compras.id=compra_producto.compraId
@@ -62,33 +69,33 @@ app.get(`/carrito/:compraId`, function (request, response) {
         if (error) {
             return console.error(`error: ${error.message}`);
         }
-        response.send(result);
+        res.send(result);
     });
     console.log("Listado de productos de una compraId");
 })
 
 
 // -----------------------------------------------------------------------------------
-// ENDPOINT PARA FORMA DE PAGO - MIS TARJETAS (GET)
+// ENDPOINT PARA FORMA DE PAGO
 
-app.get(`/formasPago/:usuarioId`, function (request, response) {
+app.get(`/formasPago/:usuarioId`, function (req, res) {
     connection.query(`SELECT * FROM tarjetas where usuarioId=${request.params.usuarioId}`,
         function (error, result, fields) {
             if (error) {
                 return console.error(`error:${error.message}`);
             }
-            response.send(result);
+            res.send(result);
         })
     console.log("Listado de tarjeta del usuario correspondiente");
 })
 
 
-app.post(`/tarjetas/:usuarioId`, function (request, response) {
-    let numeroTarjeta = request.body.numeroTarjeta;
-    let titularTarjeta = request.body.titularTarjeta;
-    let caducidadTarjeta = request.body.caducidadTarjeta;
-    let codigoSeguridadTarjeta = request.body.codigoSeguridadTarjeta;
-    let usuarioId = request.params.usuarioId;
+app.post(`/tarjetas/:usuarioId`, function (req, res) {
+    let numeroTarjeta = req.body.numeroTarjeta;
+    let titularTarjeta = req.body.titularTarjeta;
+    let caducidadTarjeta = req.body.caducidadTarjeta;
+    let codigoSeguridadTarjeta = req.body.codigoSeguridadTarjeta;
+    let usuarioId = req.params.usuarioId;
 
     console.log(request.body.titularTarjeta, request.params);
     connection.query(`INSERT INTO tarjetas (numero_tarjeta, titular, caducidad, codigo, usuarioId) VALUES 
@@ -101,7 +108,7 @@ app.post(`/tarjetas/:usuarioId`, function (request, response) {
             if (error) {
                 return console.error(`error: ${error.message}`);
             }
-            response.send({ message: `Card added` });
+            res.send({ message: `Card added` });
         });
     console.log("Card added to database");
 });
@@ -110,6 +117,7 @@ app.post(`/tarjetas/:usuarioId`, function (request, response) {
 // -----------------------------------------------------------------------------------
 // ENDPOINTS PARA LOGIN
 
+// Registro
 app.post('/registro', function (req, res) {
     let nombre = req.body.nombre;
     let apellidos = req.body.apellidos;
@@ -131,7 +139,7 @@ app.post('/registro', function (req, res) {
 });
 
 
-
+// Login
 app.post('/login', function (req, res) {
     let email = req.body.email;
     let password = req.body.password;
@@ -162,8 +170,8 @@ app.post('/login', function (req, res) {
 
 // -----------------------------------------------------------------------------------
 
-app.get("/hello", (request, response) => {
-    response.send({ message: "hello world!" });
+app.get("/hello", (req, res) => {
+    res.send({ message: "hello world!" });
 });
 
 app.listen(8000, () => {
