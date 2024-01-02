@@ -57,6 +57,7 @@ app.get(`/carrito/:compraId`, function (request, response) {
 })
 
 
+// -----------------------------------------------------------------------------------
 // ENDPOINT PARA FORMA DE PAGO - MIS TARJETAS (GET)
 
 app.get(`/formasPago/:usuarioId`, function (request, response) {
@@ -91,12 +92,44 @@ app.post(`/tarjetas/:usuarioId`, function (request, response) {
             }
             response.send({ message: `Card added` });
         });
-    console.log("Card added to database")
+    console.log("Card added to database");
+});
+
+
+// -----------------------------------------------------------------------------------
+// ENDPOINTS PARA LOGIN
+
+app.post('/registro', function (req, res) {
+    let nombre = req.body.nombre;
+    let apellidos = req.body.apellidos;
+    let email = req.body.email;
+    let password = req.body.password;
+
+    connection.query(`INSERT INTO usuario (nombre, apellidos, email, contraseña) VALUES 
+                    ('${nombre}', 
+                    '${apellidos}', 
+                    '${email}', 
+                    '${password}')`,
+        function (error, result, fields) {
+            if (error) {
+                return console.error(`error: ${error.message}`);
+            }
+            res.send({ message: `User added` });
+        });
+    console.log("User added to database");
 });
 
 
 
 
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------
 
 app.get("/hello", (request, response) => {
     response.send({ message: "hello world!" });
