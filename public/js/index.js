@@ -40,7 +40,7 @@ function mostrarProductos() {
                         </div>
                     </div>`;
             }
-
+            console.log(json)
             productosDiv.innerHTML = innerHTML;
         }).catch(function (error) {
             console.log(error);
@@ -48,5 +48,47 @@ function mostrarProductos() {
 }
 
 function addCarrito(productoId) {
+    let usuarioId = localStorage.getItem("usuarioId");
 
+    let comprobacion = localStorage.getItem("compraId");
+
+    if (comprobacion === null) {
+        fetch(`${host}/newCompra`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                usuarioId: usuarioId
+            })
+        })
+            .then(function (response) {
+                return response.json();
+
+            }).then(function (json) {
+                console.log(json);
+                localStorage.setItem('compraId', json.insertId);
+
+                fetch(`${host}/newOrderProduct`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        compraId: json.insertId,
+                        productoId: productoId
+                    })
+                })
+                    .then(function (response) {
+                        return response.json();
+                    }).then(function (json) {
+                        console.log(json);
+                    }).catch(function (error) {
+                        console.log(error);
+                    })
+
+            }).catch(function (error) {
+                console.log(error);
+            })
+    } else {
+        fetch(`${host} /comprobacion`, {
+
+        })
+    }
 }

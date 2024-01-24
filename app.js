@@ -12,7 +12,7 @@ app.use(express.json());
 const connection = mysql.createConnection({
     host: "localHost",
     user: "root",
-    password: "Elitista1990",
+    password: "RobertoAcLu",
     database: "sneaker_store",
 
 });
@@ -52,8 +52,51 @@ app.get(`/productos`, function (req, res) {
     console.log("Listado de todos los productos");
 })
 
-app.post('/addCarro', function (req, res) {
 
+app.post('/newCompra', function (req, res) {
+    let usuarioId = req.body.usuarioId;
+
+    connection.query(`INSERT INTO compras (usuarioId, pagado) VALUES
+                    (${usuarioId},0)`,
+        function (error, result, fields) {
+
+            if (error) {
+                res.status(400).send(`error: ${error.message}`);
+                return;
+            }
+            res.send(result);
+        });
+})
+
+app.post('/newOrderProduct', function (req, res) {
+    let compraId = req.body.compraId;
+    let productoId = req.body.productoId;
+
+
+    connection.query(`INSERT INTO compra_producto (compraId, productoId, cantidad) VALUES
+                    (${compraId},${productoId}, 1)`,
+        function (error, result, fields) {
+
+            if (error) {
+                res.status(400).send(`error: ${error.message}`);
+                return;
+            }
+            res.send(result);
+        })
+})
+
+
+app.get('/comprobacion', function (req, res) {
+    connection.query(`SELECT * FROM compras_producto WHERE compraId = ${req.query.compraId} 
+                    AND productoId = ${req.query.productoId}`,
+        function (error, result, fields) {
+
+            if (error) {
+                res.status(400).send(`error: ${error.message}`);
+                return;
+            }
+            res.send(result);
+        })
 })
 
 

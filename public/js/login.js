@@ -64,7 +64,7 @@ function iniciarSesion() {
             localStorage.setItem("usuarioId", json[0].id);
             localStorage.setItem("nombre", json[0].nombre);
 
-            window.location.href = '/html/index.html';
+            window.location.href = '../index.html';
         }).catch(function (error) {
             console.log(error);
         });
